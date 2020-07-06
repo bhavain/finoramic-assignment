@@ -1,13 +1,11 @@
 import json
 import subprocess
 import sys
-import pkg_resources
 
 with open('/projectDependencies.json') as f:
   data = json.load(f)
 
 uninstalled_packages = []
-
 
 for dep in data["Dependencies"]:
     try:
